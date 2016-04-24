@@ -4,7 +4,14 @@ resources:
   source:
     uri: https://github.com/rjain-pivotal/flight-school
     branch: master
-
+- name: staging-app
+  type: cf
+  source:
+    api: https://api.pcf2.cloud.fe.pivotal.io
+    username: student20
+    password: D3LL
+    organization: student20-org
+    space: development
 jobs:
 - name: test-app
   plan:
@@ -12,3 +19,6 @@ jobs:
     trigger: true
   - task: tests
     file: flight-school/ci/tasks/build.yml
+  - put: staging-app
+    params:
+      manifest: flight-school/manifest.yml
