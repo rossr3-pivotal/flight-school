@@ -12,6 +12,8 @@ resources:
     password: D3LL
     organization: student20-org
     space: development
+    skip_cert_check: true
+
 jobs:
 - name: test-app
   plan:
