@@ -2,17 +2,17 @@ resources:
 - name: flight-school
   type: git
   source:
-    uri: https://github.com/rjain-pivotal/flight-school
-    branch: master
+      uri: {{github-uri}}
+      branch: {{github-branch}}
 - name: staging-app
   type: cf
   source:
-    api: https://api.pcf2.cloud.fe.pivotal.io
-    username: student20
-    password: D3LL
-    organization: student20-org
-    space: development
-    skip_cert_check: true
+      api: {{cf-api}}
+      username: {{cf-username}}
+      password: {{cf-password}}
+      organization: {{cf-org}}
+      space: {{cf-space}}
+      skip_cert_check: true
 
 jobs:
 - name: test-app
