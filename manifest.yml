@@ -1,3 +1,4 @@
-name: fs-${random-word}
+name: flight-school
 memory: 128M
+host: fs-${random-word}
 path: .
