@@ -1,4 +1,3 @@
 name: flight-school-${random-word}
 memory: 128M
-random-route: true
 path: .
